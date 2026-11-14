@@ -1,0 +1,37 @@
+{
+ "slug": "02-trafo",
+ "header": "TRAFO ERKLÄRT",
+ "next": "Wie funktioniert ein FI-Schalter?",
+ "hook": {"lines": [["Wie funktioniert ein", "white", 110], ["TRAFO?", "yel", 200]],
+          "say": ["Wie funktioniert eigentlich ein Trafo?", "In sechzig Sekunden erklärt."]},
+ "scenes": [
+  {"type": "icon", "title": "Der Aufbau", "icon": "trafo",
+   "say": ["Ein Trafo hat zwei Spulen auf einem gemeinsamen Eisenkern.",
+           "Wechselstrom in der ersten Spule erzeugt ein wechselndes Magnetfeld.",
+           "Das induziert in der zweiten Spule eine Spannung."],
+   "captions": ["Zwei Spulen, ein gemeinsamer Eisenkern.",
+                "Wechselstrom → wechselndes Magnetfeld im Kern.",
+                "Das Feld induziert Spannung in der zweiten Spule."]},
+  {"type": "formula", "title": "Die Regel", "parts": [["U₁", "yel"], [" / ", "white"], ["U₂", "yel"], [" = ", "white"], ["N₁", "water"], [" / ", "white"], ["N₂", "water"]],
+   "rows": [["U", "Spannung in Volt", "yel"], ["N", "Windungszahl der Spule", "water"]],
+   "box": {"label": "Beispiel", "line": "1000 → 50 Windungen", "big": "230 V → 11,5 V", "foot": "Netzteil-Trafo im Kleinen"},
+   "say": ["Die Spannung teilt sich im Verhältnis der Windungen.",
+           "Tausend zu fünfzig Windungen machen aus zweihundertdreißig Volt nur noch elf Komma fünf Volt."]},
+  {"type": "icon", "title": "Nur Wechselstrom!", "title_color": "yel", "icon": "sine",
+   "say": ["Wichtig: Das klappt nur mit Wechselstrom.",
+           "Gleichstrom erzeugt ein konstantes Feld, und ein konstantes Feld induziert nichts."],
+   "captions": ["Ein Trafo braucht Wechselstrom.", "Gleichstrom → konstantes Feld → keine Induktion."]},
+  {"type": "cards", "title": "3 Side Facts", "title_color": "yel",
+   "cards": [{"big": "über 99 %", "small": "Wirkungsgrad großer Netztrafos – fast verlustfrei.", "color": "water"},
+             {"big": "100 Hz", "small": "Das Brummen: Der Eisenkern dehnt sich pro 50-Hz-Periode zweimal.", "color": "yel"},
+             {"big": "Blechpaket", "small": "Der Kern besteht aus dünnen, isolierten Blechen gegen Wirbelströme.", "color": "water"}],
+   "say": ["Drei schnelle Fakten.",
+           "Große Netztrafos schaffen über neunundneunzig Prozent Wirkungsgrad.",
+           "Das Brummen hat hundert Hertz, weil sich der Kern pro Periode zweimal dehnt.",
+           "Und der Kern ist aus dünnen Blechen, damit keine Wirbelströme entstehen."]}
+ ],
+ "meta": {
+  "title": "Wie funktioniert ein Trafo? ⚡ In 60 Sekunden erklärt #shorts",
+  "description": "Zwei Spulen, ein Eisenkern – und plötzlich wird aus 230 V eine Kleinspannung. So funktioniert ein Transformator in 60 Sekunden.\n\n⚡ U₁/U₂ = N₁/N₂ – das Windungsverhältnis bestimmt die Spannung\n⚡ Warum ein Trafo nur mit Wechselstrom funktioniert\n⚡ Warum Trafos mit 100 Hz brummen\n\nFolge für mehr Technik in 60 Sekunden!\n\n#trafo #transformator #elektrotechnik #strom #technik #physik #lernen #shorts"
+ }
+}

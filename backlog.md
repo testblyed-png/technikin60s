@@ -1,0 +1,26 @@
+# Themen-Backlog (Reihenfolge = Priorität)
+
+- ✅ 2026-11-14 Wie macht Wasser Strom? (Wasserkraftwerk)
+- Wie funktioniert ein Trafo? (topics/02-trafo.json – fertig gebaut)
+- Wie funktioniert ein FI-Schalter? (Differenzstrom, 30 mA, Prüftaste)
+- Warum 230 Volt und 50 Hertz?
+- Wie funktioniert eine Photovoltaikanlage? (Solarzelle, Wechselrichter)
+- Sicherung vs. LS-Schalter (thermisch/magnetisch)
+- Warum summen Hochspannungsleitungen? (Korona)
+- Wie funktioniert eine Wärmepumpe? (COP)
+- Drehstrom in 60 Sekunden (3 Phasen, 400 V)
+- Wie funktioniert ein Akku? (Li-Ionen)
+- Was ist Blindleistung?
+- Warum sitzen Vögel sicher auf Stromleitungen?
+- Wie funktioniert ein Blitzableiter?
+- Wie funktioniert ein Elektromotor?
+- Was ist Erdung / PE-Leiter?
+- Wie funktioniert ein Pumpspeicherkraftwerk?
+- Wie funktioniert ein Windrad?
+- kWh einfach erklärt – was kostet dein Föhn?
+- Warum ist Gleichstrom-Übertragung (HGÜ) im Kommen?
+- Wie funktioniert ein Brandmelder? (BMA)
+- Notbeleuchtung & Zentralbatterie
+- Wie funktioniert Induktionskochen?
+- Was ist ein Smart Meter?
+- Schuko vs. CEE-Stecker
