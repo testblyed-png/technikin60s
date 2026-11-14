@@ -13,7 +13,7 @@ Deutsche Erklär-Shorts zu Strom, Energie und Gebäudetechnik. Ziel: Reichweite 
    Gesprochener Text (`say`): Zahlen als Wörter ausschreiben, kurze Sätze. Ziel 40–60 s. 3–5 Szenen.
 5. `python3 pipeline/build.py topics/NN-slug.json` → `out/NN-slug.mp4` (+ 3 Standbilder in /tmp zur Sichtkontrolle, eines ansehen).
 6. Video + JSON committen und pushen (main).
-   Raw-URL: `https://raw.githubusercontent.com/testblyed-png/technikin60s/main/out/NN-slug.mp4`
+   Raw-URL mit Commit-Hash (umgeht den GitHub-Cache): `https://raw.githubusercontent.com/testblyed-png/technikin60s/<git rev-parse HEAD>/out/NN-slug.mp4`
 7. Upload im eingebauten Browser (Claude-Desktop-App auf Alis PC):
    - `https://studio.youtube.com/channel/UCCOqO6cc4eHwJd_63GL_ghQ/videos/upload?d=ud` öffnen
    - `pipeline/upload.js` mit ersetzten Platzhaltern per javascript_tool ausführen.
