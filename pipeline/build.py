@@ -138,18 +138,17 @@ def icon(d, kind, t, a, cx=540, cy=650):
 # ---------------------------------------------------------------- scene renderers
 def sc_hook(d, t, dur, S, s):
     waves(d, t)
-    a1, a2 = back((t - 0.15) / .5), back((t - 0.6) / .5)
+    a1, a2 = back(t / .35), back((t - 0.25) / .35)
     y = 560
     for i, (txt, col, size) in enumerate(s["lines"]):
         aa = a1 if i == 0 else a2
         f = F(size, "Black" if size > 130 else "Bold")
         y = ctext(d, y - 40 * (1 - aa), txt, f, col, cl(aa)) + 10
-    ctext(d, 1190, s.get("sub", "In 60 Sekunden erklärt"), F(56, "Medium"), "grey", ap(t, S[-1]))
+
 
 def sc_icon(d, t, dur, S, s):
     ctext(d, 300, s["title"], F(84, "Black"), s.get("title_color", "white"), ap(t, 0))
     icon(d, s["icon"], t, ap(t, 0.2), 540, s.get("icon_y", 700))
-    caption(d, t, dur, S, s["captions"], y=s.get("cap_y", 1250))
 
 def sc_cards(d, t, dur, S, s):
     ctext(d, 300, s["title"], F(84, "Black"), s.get("title_color", "white"), ap(t, 0))
@@ -172,7 +171,7 @@ def sc_formula(d, t, dur, S, s):
         d.text((215, y), sym, font=F(64, "Black"), fill=mix(c, aa, y))
         d.text((300, y + 10), txt, font=F(48, "Medium"), fill=mix("white", aa, y))
     if "box" in s:
-        b = s["box"]; ab = ap(t, S[min(1, len(S) - 1)] - .1); y0 = 1170 - 30 * (1 - ab)
+        b = s["box"]; ab = ap(t, S[min(1, len(S) - 1)] - .1); top = 680 + len(s["rows"]) * 92 + 40; s["_ky"] = top + 410; y0 = top - 30 * (1 - ab)
         card(d, (110, y0, 970, y0 + 390), ab, outline="yel")
         ctext(d, y0 + 35, b.get("label", "Beispiel"), F(44, "SemiBold"), "grey", ab)
         ctext(d, y0 + 105, b["line"], F(56, "Bold"), "white", ab)
@@ -188,7 +187,6 @@ def sc_compare(d, t, dur, S, s):
         ctext(d, 640, side["value"], F(96, "Black"), col, a, maxw=420, x=x)
     p = ease((t - S[min(1, len(S) - 1)]) / 1.0)
     d.line([(520, 690), (520 + 40 * p, 690)], fill=mix("yel", a, 690), width=10)
-    caption(d, t, dur, S, s["captions"], y=1100)
 
 def sc_outro(d, t, dur, S, s):
     waves(d, t); a = back((t - .1) / .5)
@@ -198,6 +196,22 @@ def sc_outro(d, t, dur, S, s):
     if s.get("next"): ctext(d, 1130, "Nächstes Mal: " + s["next"], F(46, "Medium"), "grey", ap(t, 1.0), maxw=860)
 
 R = dict(hook=sc_hook, icon=sc_icon, cards=sc_cards, formula=sc_formula, compare=sc_compare, outro=sc_outro)
+
+def word_at(s, t):
+    for (_, st, du), sent in zip(s["_items"], s["say"]):
+        if st <= t < st + du:
+            ws = sent.replace(",", "").replace(".", "").replace(":", "").replace("!", "").replace("?", "").split()
+            tot = sum(len(w) + 2 for w in ws); acc = st
+            for w in ws:
+                acc += du * (len(w) + 2) / tot
+                if t < acc: return w
+    return None
+def karaoke(d, t, s, y=1470):
+    w = word_at(s, t)
+    if not w: return
+    f = F(84, "Black"); tw = d.textlength(w.upper(), font=f)
+    d.rounded_rectangle((W / 2 - tw / 2 - 30, y - 12, W / 2 + tw / 2 + 30, y + 104), 22, fill=(15, 23, 42))
+    d.text((W / 2, y + 46), w.upper(), font=f, fill=COL["yel"], anchor="mm")
 
 # ---------------------------------------------------------------- pipeline
 def tts(text, path):
@@ -215,14 +229,14 @@ def main(spec_path):
         t = 0.3; s["_items"] = []
         for i, sent in enumerate(s["say"]):
             p = f"{work}/vo_{si}_{i}.wav"; dur = tts(sent, p)
-            s["_items"].append((p, t)); t += dur + 0.12
+            s["_items"].append((p, t, dur)); t += dur + 0.12
         s["_dur"] = round(t - 0.12 + 0.35, 2)
     total = sum(s["_dur"] for s in scenes)
     # video
     parts = []
     gt0 = 0
     for si, s in enumerate(scenes):
-        S = [st for _, st in s["_items"]]; dur = s["_dur"]; n = int(round(dur * FPS))
+        S = [st for _, st, _ in s["_items"]]; dur = s["_dur"]; n = int(round(dur * FPS))
         f = f"{work}/s{si:02d}.mp4"
         p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
                               "-vf", f"fade=in:st=0:d=0.25,fade=out:st={dur-0.25}:d=0.25", "-c:v", "libx264", "-crf", "20", "-preset", "veryfast",
@@ -230,7 +244,14 @@ def main(spec_path):
         for i in range(n):
             t = i / FPS; img = BASE.copy(); d = ImageDraw.Draw(img)
             R[s["type"]](d, t, dur, S, s)
-            if s["type"] not in ("hook", "outro"): header(d, gt0 + t, total, spec["header"])
+            if s["type"] not in ("hook", "outro"):
+                z = 1 + 0.035 * t / dur
+                if z > 1.001:
+                    cw, ch = int(W / z), int(H / z)
+                    img = img.crop(((W - cw) // 2, (H - ch) // 2, (W - cw) // 2 + cw, (H - ch) // 2 + ch)).resize((W, H), Image.BILINEAR)
+                d = ImageDraw.Draw(img)
+                header(d, gt0 + t, total, spec["header"])
+                if s.get("_ky", 0) <= 1520: karaoke(d, t, s, s.get("_ky", 1470))
             p.stdin.write(img.tobytes())
         p.stdin.close(); assert p.wait() == 0
         parts.append(f); gt0 += dur

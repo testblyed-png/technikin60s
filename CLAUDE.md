@@ -8,7 +8,8 @@ Deutsche Erklär-Shorts zu Strom, Energie und Gebäudetechnik. Ziel: Reichweite 
 2. Nächstes Thema aus `backlog.md` nehmen (erste Zeile ohne ✅).
 3. Fakten mit 1–2 Websuchen prüfen (nur Zahlen, die ins Video kommen). Keine ungeprüften Zahlen.
 4. `topics/NN-slug.json` nach dem Muster von `topics/02-trafo.json` schreiben.
-   Szenentypen: `icon` (icon: turbine|generator|trafo|sine|bolt|sun|battery|bulb|plug), `formula`, `cards` (max 4), `compare`.
+   Stil (Vorbild @Selbstgebaut3D): Hook = die Frage, sofort in Sekunde 0. Kurze, bildhafte Sätze, ein Aha-Moment, Wörter erscheinen einzeln groß im Bild (macht build.py automatisch). Titel = Neugier-Frage + Emoji + #shorts.
+   Szenentypen: `icon` (icon: turbine|generator|trafo|sine|bolt|sun|battery|bulb|plug), `formula` (max 3 rows), `cards` (max 4), `compare`. Feld `captions` ist nicht mehr nötig.
    Gesprochener Text (`say`): Zahlen als Wörter ausschreiben, kurze Sätze. Ziel 40–60 s. 3–5 Szenen.
 5. `python3 pipeline/build.py topics/NN-slug.json` → `out/NN-slug.mp4` (+ 3 Standbilder in /tmp zur Sichtkontrolle, eines ansehen).
 6. Video + JSON committen und pushen (main).

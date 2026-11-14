@@ -16,7 +16,7 @@ def mix(scenes, TOTAL, outpath, seed=7):
         if j > i: buf[i:j] += g * x[: j - i]
     voice = np.zeros(N, np.float32)
     for s, off in zip(scenes, offs):
-        for f, st in s["_items"]: put(voice, load(f), off + st)
+        for f, st, _ in s["_items"]: put(voice, load(f), off + st)
     voice /= max(1e-6, np.abs(voice).max()) / 0.9
     # ---------------- music (Am – F – C – G, 100 bpm)
     bpm = 100; beat = 60 / bpm; bar = 4 * beat
@@ -94,7 +94,7 @@ def mix(scenes, TOTAL, outpath, seed=7):
     put(sfx, boom(), offs[0] + 0.6, 0.55)
     for s, off in zip(scenes, offs):
         if s["type"] in ("cards", "formula", "compare"):
-            for i, (_, st) in enumerate(s["_items"][1:]): put(sfx, pop(760 + 110 * i), off + st, 0.22)
+            for i, (_, st, _) in enumerate(s["_items"][1:]): put(sfx, pop(760 + 110 * i), off + st, 0.22)
     put(sfx, chime(), offs[-1] + 0.1, 0.3)
     mix = voice * 1.0 + music * mgain + sfx
     mix /= np.abs(mix).max() / 0.95
