@@ -1,5 +1,5 @@
 // In YouTube Studio auf .../videos/upload?d=ud ausführen (Upload-Dialog offen).
-// Platzhalter __URL__, __TITLE__, __DESC__ vorher ersetzen (JSON-Strings).
+// Die drei Platzhalter (URL, TITLE, DESC in Großbuchstaben mit je zwei Unterstrichen) vorher durch JSON-Strings ersetzen.
 const URL_ = __URL__, TITLE = __TITLE__, DESC = __DESC__;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const q = (s, root = document) => root.querySelector(s);

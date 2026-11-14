@@ -1,7 +1,7 @@
 # Themen-Backlog (Reihenfolge = Priorität)
 
 - ✅ 2026-11-14 Wie macht Wasser Strom? (Wasserkraftwerk)
-- Wie funktioniert ein Trafo? (topics/02-trafo.json – fertig gebaut)
+- ✅ 2026-11-14 Wie funktioniert ein Trafo? (privat hochgeladen)
 - Wie funktioniert ein FI-Schalter? (Differenzstrom, 30 mA, Prüftaste)
 - Warum 230 Volt und 50 Hertz?
 - Wie funktioniert eine Photovoltaikanlage? (Solarzelle, Wechselrichter)
