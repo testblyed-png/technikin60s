@@ -3,7 +3,7 @@ Stil-Regel: Titel = Neugier-Frage zu etwas, das jeder im Alltag sieht. Keine The
 
 - ✅ 2026-11-14 Wie macht Wasser Strom? (Wasserkraftwerk)
 - ✅ 2026-11-14 Wie funktioniert ein Trafo? (privat hochgeladen)
-- Warum bekommen Vögel auf der Stromleitung keinen Schlag?
+- ✅ 2026-11-16 Warum bekommen Vögel auf der Stromleitung keinen Schlag? (privat hochgeladen)
 - Was steckt in den grauen Kästen am Straßenrand? (Kabelverteilerschrank)
 - Warum blinken Windräder nachts rot?
 - Warum knistern Hochspannungsleitungen bei Regen? (Korona)

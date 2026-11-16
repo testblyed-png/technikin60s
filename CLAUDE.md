@@ -17,6 +17,7 @@ Deutsche Erklär-Shorts zu Strom, Energie und Gebäudetechnik. Ziel: Reichweite 
 7. Upload im eingebauten Browser (Claude-Desktop-App auf Alis PC):
    - `https://studio.youtube.com/channel/UCCOqO6cc4eHwJd_63GL_ghQ/videos/upload?d=ud` öffnen
    - `pipeline/upload.js` mit ersetzten Platzhaltern per javascript_tool ausführen.
+   - Danach auf `studio.youtube.com/video/<ID>/edit` prüfen, ob Titel/Beschreibung gesetzt sind (am 2026-11-16 blieben sie leer, execCommand wird nicht gespeichert). Falls nicht: Felder per find + computer (Klick, ctrl+a, type) befüllen und „Speichern“ klicken.
    - Lädt als **PRIVAT** hoch. Nie selbst veröffentlichen – Ali schaltet auf öffentlich.
 8. `backlog.md`: Thema mit ✅ + Datum markieren, `log.md` eine Zeile anhängen (Datum, Titel, Link). Committen + pushen.
 9. Ali per PushNotification kurz informieren: „Neues Video privat hochgeladen: <Titel> – bitte prüfen & veröffentlichen.“
