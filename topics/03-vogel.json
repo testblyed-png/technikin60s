@@ -14,7 +14,7 @@
    "say": ["Der Vogel sitzt nur auf einem Draht.",
            "Beide Füße haben fast genau dieselbe Spannung.",
            "Kein Unterschied, also fließt praktisch kein Strom durch ihn.",
-           "Der Strom bleibt lieber im Kupfer, da geht es viel leichter."]},
+           "Der Strom bleibt lieber im Draht, da geht es viel leichter."]},
   {"type": "icon", "title": "Gefährlich wird es so", "title_color": "yel", "icon": "plug",
    "say": ["Aber Achtung!",
            "Berührt der Vogel gleichzeitig zwei Leitungen oder Draht und geerdeten Mast,",
