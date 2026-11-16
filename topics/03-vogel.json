@@ -1,0 +1,35 @@
+{
+ "slug": "03-vogel",
+ "header": "VOGEL AUF DER LEITUNG",
+ "next": "Was steckt in den grauen Kästen am Straßenrand?",
+ "hook": {"lines": [["Warum bekommt der", "white", 100], ["VOGEL", "yel", 200], ["keinen Schlag?", "white", 110]],
+          "say": ["Warum bekommt ein Vogel auf der Stromleitung keinen Schlag?"]},
+ "scenes": [
+  {"type": "icon", "title": "Strom braucht Gefälle", "icon": "bolt",
+   "say": ["Strom fließt nur, wenn es einen Spannungsunterschied gibt.",
+           "Wie Wasser, das nur bergab läuft."]},
+  {"type": "compare", "title": "Zwischen den Füßen",
+   "left": {"label": "linker Fuß", "value": "gleich"},
+   "right": {"label": "rechter Fuß", "value": "gleich"},
+   "say": ["Der Vogel sitzt nur auf einem Draht.",
+           "Beide Füße haben fast genau dieselbe Spannung.",
+           "Kein Unterschied, also fließt praktisch kein Strom durch ihn.",
+           "Der Strom bleibt lieber im Kupfer, da geht es viel leichter."]},
+  {"type": "icon", "title": "Gefährlich wird es so", "title_color": "yel", "icon": "plug",
+   "say": ["Aber Achtung!",
+           "Berührt der Vogel gleichzeitig zwei Leitungen oder Draht und geerdeten Mast,",
+           "dann fließt der Strom durch seinen Körper.",
+           "Für große Vögel wie Störche ist das lebensgefährlich."]},
+  {"type": "cards", "title": "Schon gewusst?", "title_color": "yel",
+   "cards": [{"big": "§ 41", "small": "Bundesnaturschutzgesetz: Mittelspannungsmasten müssen Vögel vor Stromschlag schützen.", "color": "water"},
+             {"big": "Abstand", "small": "Isolatoren und Abdeckungen sorgen dafür, dass Flügel nicht zwei Teile berühren.", "color": "yel"},
+             {"big": "Du nicht!", "small": "Ein Mensch auf der Leiter ist geerdet – der Vogel-Trick klappt bei dir nicht.", "color": "water"}],
+   "say": ["Deshalb schreibt das Bundesnaturschutzgesetz vor:",
+           "Mittelspannungsmasten müssen so gebaut sein, dass Vögel geschützt sind.",
+           "Und für dich gilt: Niemals einer Leitung nähern. Du stehst nämlich auf dem Boden."]}
+ ],
+ "meta": {
+  "title": "Warum bekommt der Vogel auf der Stromleitung keinen Schlag? 🐦⚡ #shorts",
+  "description": "Ein Vogel sitzt auf der Hochspannungsleitung – und nichts passiert. Warum? Strom fließt nur bei einem Spannungsunterschied. Zwischen den Füßen auf demselben Draht gibt es praktisch keinen.\n\n⚡ Strom braucht ein Gefälle – wie Wasser\n⚡ Gefährlich wird es bei Kontakt mit zwei Leitern oder dem geerdeten Mast\n⚡ § 41 BNatSchG: Vogelschutz an Mittelspannungsmasten\n\nQuellen:\n• § 41 BNatSchG – https://www.gesetze-im-internet.de/bnatschg_2009/__41.html\n• NABU: Stromtod an Freileitungen – https://www.nabu.de/tiere-und-pflanzen/voegel/gefaehrdungen/stromtod/00668.html\n\n⚠️ Niemals Freileitungen nähern – Lebensgefahr!\n\nFolge für mehr Technik in 60 Sekunden!\n\n#strom #vögel #hochspannung #elektrotechnik #physik #technik #lernen #shorts"
+ }
+}
