@@ -1,0 +1,93 @@
+{
+ "slug": "04-kvs",
+ "header": "GRAUE KÄSTEN",
+ "next": "Warum blinken Windräder nachts rot?",
+ "hook": {
+  "lines": [
+   [
+    "Was steckt in den",
+    "white",
+    100
+   ],
+   [
+    "GRAUEN KÄSTEN",
+    "yel",
+    150
+   ],
+   [
+    "am Straßenrand?",
+    "white",
+    110
+   ]
+  ],
+  "say": [
+   "Was steckt eigentlich in den grauen Kästen am Straßenrand?"
+  ]
+ },
+ "scenes": [
+  {
+   "type": "icon",
+   "title": "Kabelverteilerschrank",
+   "icon": "plug",
+   "say": [
+    "Das ist ein Kabelverteilerschrank.",
+    "Er ist so etwas wie eine Mehrfachsteckdose für deine ganze Straße.",
+    "Fast jeder läuft täglich daran vorbei, ohne es zu wissen."
+   ]
+  },
+  {
+   "type": "icon",
+   "title": "Woher kommt der Strom?",
+   "icon": "trafo",
+   "say": [
+    "Der Strom kommt aus der Trafostation im Viertel.",
+    "Dort wird die Mittelspannung auf vierhundert Volt heruntergesetzt.",
+    "Ein dickes Kabel unter dem Gehweg bringt ihn zum grauen Kasten."
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Im Inneren",
+   "title_color": "yel",
+   "cards": [
+    {
+     "big": "Schienen",
+     "small": "Kupferschienen verteilen den Strom auf mehrere Abgänge.",
+     "color": "water"
+    },
+    {
+     "big": "NH-Sicherungen",
+     "small": "Große Sicherungen schützen jedes abgehende Kabel.",
+     "color": "yel"
+    },
+    {
+     "big": "Abgänge",
+     "small": "Von hier läuft je ein Kabel zum Hausanschluss mehrerer Häuser.",
+     "color": "water"
+    }
+   ],
+   "say": [
+    "Innen sitzen Kupferschienen und große Sicherungen.",
+    "Von hier läuft ein Kabel zu jedem Haus in der Nähe.",
+    "Bei einem Kurzschluss brennt nur eine Sicherung durch.",
+    "Der Rest der Straße hat weiter Strom."
+   ]
+  },
+  {
+   "type": "icon",
+   "title": "Finger weg!",
+   "title_color": "yel",
+   "icon": "bolt",
+   "say": [
+    "Darum ist der Kasten immer abgeschlossen.",
+    "Drinnen liegen blanke Teile unter Spannung.",
+    "Öffnen darf ihn nur der Netzbetreiber.",
+    "Siehst du einen kaputten Kasten, melde ihn sofort dem Netzbetreiber."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Was steckt in den grauen Kästen am Straßenrand? 🔌⚡ #shorts",
+  "description": "Die grauen Kästen am Gehweg sind Kabelverteilerschränke – die „Mehrfachsteckdose“ für deine Straße.\n\n⚡ Strom kommt aus der Trafostation (Ortsnetzstation) mit 400 V\n⚡ Innen: Kupferschienen und NH-Sicherungen\n⚡ Von hier geht je ein Kabel zum Hausanschluss mehrerer Häuser\n⚡ Kurzschluss? Nur eine Sicherung löst aus, der Rest der Straße bleibt versorgt\n\nQuellen:\n• OpenStreetMap Wiki: Kabelverteilerschrank – https://wiki.openstreetmap.org/wiki/Template:De:Description:Power:Cable_Distribution_Cabinet\n• Baunetz Wissen: Verteilungsnetze – https://www.baunetzwissen.de/drucken/verteilungsnetze-48873\n• Baunetz Wissen: Hausanschluss – https://www.baunetzwissen.de/elektro/fachwissen/grundinstallationen/hausanschluss-152992\n\n⚠️ Niemals Verteilerschränke öffnen – Lebensgefahr! Schäden dem Netzbetreiber melden.\n\nFolge für mehr Technik in 60 Sekunden!\n\n#strom #stromnetz #elektrotechnik #technik #energie #lernen #shorts"
+ }
+}
