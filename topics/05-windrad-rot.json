@@ -1,0 +1,70 @@
+{
+ "slug": "05-windrad-rot",
+ "header": "ROTES BLINKEN",
+ "next": "Warum knistern Hochspannungsleitungen bei Regen?",
+ "hook": {
+  "lines": [
+   ["Warum blinken", "white", 110],
+   ["WINDRÄDER", "yel", 150],
+   ["nachts rot?", "white", 110]
+  ],
+  "say": ["Warum blinken Windräder nachts eigentlich rot?"]
+ },
+ "scenes": [
+  {
+   "type": "icon",
+   "title": "Hindernis am Himmel",
+   "icon": "turbine",
+   "say": [
+    "Für Flugzeuge ist ein Windrad ein Hindernis.",
+    "Außerhalb von Orten muss alles ab hundert Metern Höhe markiert werden.",
+    "Moderne Windräder sind oft über zweihundert Meter hoch."
+   ]
+  },
+  {
+   "type": "icon",
+   "title": "Feuer W, rot",
+   "title_color": "yel",
+   "icon": "bolt",
+   "say": [
+    "Tagsüber reichen rote Streifen an den Flügeln.",
+    "Nachts übernehmen rote Blinklichter auf der Gondel.",
+    "Alle Windräder im Park blinken im gleichen Takt.",
+    "So sieht der Pilot den ganzen Park als ein Hindernis."
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Das Problem",
+   "title_color": "yel",
+   "cards": [
+    {"big": "95–100 %", "small": "der Nächte blinken die Lichter für niemanden.", "color": "yel"},
+    {"big": "Anwohner", "small": "fühlen sich vom Dauerblinken gestört.", "color": "water"}
+   ],
+   "say": [
+    "Aber meistens fliegt gar kein Flugzeug vorbei.",
+    "Fast das ganze Jahr blinken die Lichter also umsonst."
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Licht nur bei Bedarf",
+   "cards": [
+    {"big": "4 km", "small": "Radius: Sensoren suchen den Himmel nach Flugzeugen ab.", "color": "water"},
+    {"big": "AN", "small": "nur, wenn wirklich ein Flugzeug in der Nähe ist.", "color": "yel"},
+    {"big": "seit 2025", "small": "Pflicht für Windräder an Land (Umrüstung läuft).", "color": "water"}
+   ],
+   "say": [
+    "Darum gibt es jetzt die bedarfsgesteuerte Nachtkennzeichnung.",
+    "Sensoren suchen in vier Kilometern Umkreis nach Flugzeugen.",
+    "Nur wenn eins kommt, geht das rote Licht an.",
+    "Seit zweitausendfünfundzwanzig ist das in Deutschland Pflicht.",
+    "Der Windpark bleibt also immer öfter dunkel."
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Warum blinken Windräder nachts rot? 🔴🌬️ #shorts",
+  "description": "Windräder sind für Flugzeuge Luftfahrthindernisse – deshalb blinken sie nachts rot.\n\n⚡ Außerhalb von Orten ist alles ab 100 m Höhe kennzeichnungspflichtig\n⚡ Nachts: rote Hindernisfeuer („Feuer W, rot“), im Windpark synchron\n⚡ Laut BMWE blinken sie 95–100 % des Jahres unnötig\n⚡ Bedarfsgesteuerte Nachtkennzeichnung (BNK): Licht nur, wenn ein Luftfahrzeug im Umkreis von mind. 4 km ist\n⚡ BNK ist seit 1.1.2025 Pflicht für Windräder an Land (§ 9 Abs. 8 EEG) – die Umrüstung läuft noch\n\nQuellen:\n• BMWE FAQ Windenergie an Land – https://www.bundeswirtschaftsministerium.de/Redaktion/DE/FAQ/Windenergie-an-Land/faq-windenergie-an-land.html\n• BWE Faktencheck BNK (Feb. 2026) – https://www.wind-energie.de/fileadmin/redaktion/dokumente/publikationen-oeffentlich/themen/02-technik-und-netze/06-betrieb/20260213_Faktencheck_BNK.pdf\n\nFolge für mehr Technik in 60 Sekunden!\n\n#windkraft #windrad #energiewende #technik #energie #lernen #shorts"
+ }
+}
