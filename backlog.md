@@ -5,7 +5,7 @@ Stil-Regel: Titel = Neugier-Frage zu etwas, das jeder im Alltag sieht. Keine The
 - ✅ 2026-11-14 Wie funktioniert ein Trafo? (privat hochgeladen)
 - ✅ 2026-11-16 Warum bekommen Vögel auf der Stromleitung keinen Schlag? (privat hochgeladen)
 - ✅ 2026-11-18 Was steckt in den grauen Kästen am Straßenrand? (Kabelverteilerschrank) (privat hochgeladen)
-- Warum blinken Windräder nachts rot?
+- ✅ 2026-11-21 Warum blinken Windräder nachts rot? (privat hochgeladen)
 - Warum knistern Hochspannungsleitungen bei Regen? (Korona)
 - Warum hat dein Stecker diese Metallbügel? (Schuko, Schutzleiter)
 - Warum fliegt die Sicherung, wenn Föhn und Wasserkocher gleichzeitig laufen?
